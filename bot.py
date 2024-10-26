@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS users(
 ''')
 conn.commit()
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=API_TOKEN, proxy="http://proxy.server:3128")
 dp = Dispatcher(bot=bot, storage=MemoryStorage())
 
 class Register(StatesGroup):
